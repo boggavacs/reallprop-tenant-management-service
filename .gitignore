@@ -1,0 +1,148 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+.history/
+
+### Environment Variables ###
+.env
+.env.local
+.env.*.local
+.env.properties
+
+### Spring Boot ###
+application-secrets.properties
+application-secrets.yml
+.h2.server.properties
+spring.pid
+
+### Logs ###
+logs/
+*.log
+*.log.*
+*.gz
+
+### Database ###
+*.db
+*.sqlite
+*.h2.db
+*.mv.db
+
+### Gradle Wrapper ###
+gradlew
+gradlew.bat
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+### Mac OS ###
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+### Linux ###
+.directory
+.Xauthority
+.bash_history
+
+### IDE Specific ###
+*.swp
+*.swo
+*~
+.c9/
+*.sublime-workspace
+*.sublime-project
+
+### Node (if using npm) ###
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+### Coverage Reports ###
+coverage/
+jacoco.exec
+.coverage
+htmlcov/
+.pytest_cache/
+
+### Build Output ###
+*.war
+*.ear
+*.zip
+*.nar
+dist/
+
+### Temporary Files ###
+*.tmp
+*.temp
+tmp/
+temp/
+
+### Credentials & Secrets ###
+secrets/
+credentials.json
+*.pem
+*.key
+*.keystore
+*.p12
+*.jks
+
+### Local Configuration ###
+local.properties
+gradle.properties
+
+### IDE Settings ###
+.classpath
+.project
+.c9/
+*.launch
+.settings/
+workspace.xml

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: tenent-services
+  profiles:
+    active: local
+
+mongo:
+  user: admin
+  password: password
+
