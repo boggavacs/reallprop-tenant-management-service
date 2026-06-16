@@ -4,7 +4,9 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://192.168.1.158:27017
-      username: ${mongo.user}
-      password: ${mongo.password}
-      database: realdb
+      uri: mongodb://${mongo.user}:${mongo.password}@192.168.1.158:27017/${mongo.DB}?authSource=admin
+#      uri: mongodb://192.168.1.158:27017
+##      username: ${mongo.user}
+##      password: ${mongo.password}
+#      database: realdb
+#      authentication-database: admin
