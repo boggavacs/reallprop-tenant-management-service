@@ -7,7 +7,7 @@ spring:
       uri: mongodb://${mongo.user}:${mongo.password}@192.168.1.158:27017/${mongo.DB}?authSource=admin
 
 server:
-  port: 8080
+  port: 8081
   error:
     include-message: ALWAYS
     include-binding-errors: ALWAYS
