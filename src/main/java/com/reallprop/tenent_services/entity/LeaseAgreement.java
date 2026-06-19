@@ -1,5 +1,7 @@
 package com.reallprop.tenent_services.entity;
 
+import com.reallprop.tenent_services.entity.common.userDetails;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,8 +14,11 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LeaseAgreement {
-    private List<CommonDetails> landLoardDetails;
-    private List<CommonDetails> tenantDetails;
+    @Valid
+    private List<userDetails> landLordDetails;
+
+    @Valid
+    private List<userDetails> tenantDetails;
     private List<PropertyDetails> propertyDetails;
     private String[] leaseTerms;
     private String[] leaseClause;

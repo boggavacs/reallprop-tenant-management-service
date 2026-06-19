@@ -4,9 +4,9 @@ import java.util.List;
 
 public class PropertyDetails {
     private String propertyName;
-    private String propertyAddress;
+    private List<String> propertyAddress;
     private String unitNumber;
-    private List<PropertyType> propertyType;
+    private List<String> propertyType;
 }
 
 
