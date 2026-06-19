@@ -5,7 +5,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://${mongo.user}:${mongo.password}@192.168.1.158:27017/${mongo.DB}?authSource=admin
-
+# comments
 server:
   port: 8080
   error:
