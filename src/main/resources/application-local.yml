@@ -12,3 +12,22 @@ server:
     include-message: ALWAYS
     include-binding-errors: ALWAYS
     include-stacktrace: ON_PARAM
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
+          - metrics
+          - mappings
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+info:
+  app:
+    name: Tenent Services
+    description: This service is responsible for managing tenants in the application.
+    version: 1.0.0
