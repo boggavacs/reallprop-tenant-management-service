@@ -1,0 +1,17 @@
+@baseUrl = http://localhost:8081/api/v1/leaseAgreements
+
+### Create Lease Agreement
+POST {{baseUrl}}/create
+Content-Type: application/json
+
+{
+  "landLordDetails":[],
+  "tenantDetails":[],
+  "propertyDetails":[],
+  "leaseTerms":[]
+}
+
+
+### Testing
+
+GET http://jsonplaceholder.typicode.com/posts
