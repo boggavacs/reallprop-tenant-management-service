@@ -7,11 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
@@ -32,6 +29,20 @@ public class LeaseAgreementController {
         LeaseAgreementInfo leaseAgreementInfo = leaseAgreementService.createLeaseAgreement(leaseAgreement);
         log.info("Generated lease agreement with id/info: {}", leaseAgreementInfo);
         return new ResponseEntity<>(leaseAgreementInfo,HttpStatus.CREATED);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<LeaseAgreement> getLeaseAgreementById(@PathVariable String id){
+        log.info("Received request to get lease agreement by id: {}", id);
+        LeaseAgreement leaseAgreement = leaseAgreementService.getLeaseAgreementById(id);
+        if (leaseAgreement != null) {
+            log.info("Found lease agreement: {}", leaseAgreement);
+            return new ResponseEntity<>(leaseAgreement, HttpStatus.OK);
+        } else {
+            log.warn("Lease agreement not found for id: {}", id);
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
     }
 
 }

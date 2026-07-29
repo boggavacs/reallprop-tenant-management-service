@@ -6,10 +6,13 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.time.Instant;
 import java.util.List;
 
 @Data
@@ -23,18 +26,32 @@ public class LeaseAgreement {
     private String id;
 
     @Valid
-    @Field("LAND_LORD_DETAILS")
-    private List<userDetails> landLordDetails;
+    @Field("LandLordDetails")
+    private userDetails landLordDetails;
 
     @Valid
-    @Field("TENANT_DETAILS")
-    private List<userDetails> tenantDetails;
+    @Field("TenantDetails")
+    private userDetails tenantDetails;
 
-    @Field("PROPERTY_DETAILS")
-    private List<PropertyDetails> propertyDetails;
+    @Field("PropertyDetails")
+    private PropertyDetails propertyDetails;
 
-    @Field("LEASE_TERMS")
+    @Field("LeaseTerms")
     private List<String> leaseTerms;
+
+    @Field("CreatedBy")
+    private String createdBy;
+
+    @Field("CreatedDate")
+    @CreatedDate
+    private Instant createdDate;
+
+    @Field("ModifiedBy")
+    private String modifiedBy;
+
+    @Field("LastModifiedDate")
+    @LastModifiedBy
+    private Instant lastModifiedDate;
 
 //    private List<String> leaseClause;
 //    private List<String> paymentDetails;

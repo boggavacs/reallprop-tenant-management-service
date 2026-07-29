@@ -12,4 +12,6 @@ import lombok.NoArgsConstructor;
 public class LeaseAgreementInfo {
     private String leaseAgreementId;
     private String message;
+    @Builder.Default
+    private boolean success = false;
 }
